@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stackput.c                                      :+:      :+:    :+:   */
+/*   ft_stackpushunder.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 14:03:01 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/16 14:10:10 by beroux           ###   ########.fr       */
+/*   Created: 2023/02/15 23:36:03 by beroux            #+#    #+#             */
+/*   Updated: 2023/02/15 23:39:37 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "core/push_swap.h"
 
-void	ft_stackput(t_stack *stack)
+void	ft_stackaddunder(t_stack **stack, t_stack *to_add)
 {
-	if (!stack)
-		return ;
-	printf("%lu\n", stack->content);
-	if (stack->next)
-		ft_stackput(stack->next);
+	t_stack	*tmp;
+
+	tmp = *stack;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = to_add;
+	to_add->next = NULL;
 }

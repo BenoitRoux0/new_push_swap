@@ -5,8 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/12 18:41:40 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/12 18:41:40 by beroux           ###   ########lyon.fr   */
+/*   Created: 2023/02/15 18:53:03 by beroux            #+#    #+#             */
+/*   Updated: 2023/02/15 23:47:40 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "core/push_swap.h"
+
+void	ft_stackrev_rotate(t_stack **stack, char name)
+{
+	t_stack	*tmp;
+
+	tmp = ft_stackpopunder(*stack);
+	tmp->next = *stack;
+	*stack = tmp;
+	write(1, "rr", 2);
+	write(1, &name, 1);
+	write(1, "\n", 1);
+}

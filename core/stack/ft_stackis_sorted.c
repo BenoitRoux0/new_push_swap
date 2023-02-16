@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stackput.c                                      :+:      :+:    :+:   */
+/*   ft_stackis_sorted.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 14:03:01 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/16 14:10:10 by beroux           ###   ########.fr       */
+/*   Created: 2023/02/16 14:10:43 by beroux            #+#    #+#             */
+/*   Updated: 2023/02/16 14:12:49 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "core/push_swap.h"
 
-void	ft_stackput(t_stack *stack)
+int ft_stackis_sorted(t_stack *stack)
 {
 	if (!stack)
-		return ;
-	printf("%lu\n", stack->content);
-	if (stack->next)
-		ft_stackput(stack->next);
+		return (1);
+	while (stack->next)
+	{
+		if (stack->content > stack->next->content)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }
