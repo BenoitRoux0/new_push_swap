@@ -12,8 +12,6 @@
 
 NAME =		push_swap
 
-CC =		gcc
-
 CFLAGS =	-Wall -Werror -Wextra
 
 SRCS =		core/push_swap.c				\
@@ -37,7 +35,7 @@ SRCS =		core/push_swap.c				\
 			core/stack/ft_stackrotate.c		\
 			core/stack/ft_stackrev_rotate.c	\
 			core/stack/ft_stackis_sorted.c	\
-			core/radix/radix.c				\
+			core/sorts/radix.c				\
 
 OBJS =		$(SRCS:%.c=%.o)
 

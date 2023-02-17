@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:33:57 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/16 14:02:01 by beroux           ###   ########.fr       */
+/*   Updated: 2023/02/17 18:09:38 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void		ft_stack_positive(t_stack *stack);
 
 void	ft_makestack_easier(t_stack *stack)
 {
-	int64_t i;
+	int64_t	i;
 	int64_t	size;
 
 	ft_stack_positive(stack);
@@ -76,5 +76,6 @@ static void	ft_stack_set_minl(t_stack *stack, int64_t limit)
 		}
 		stack = stack->next;
 	}
-	min_ptr->content = limit;
+	if (min_ptr)
+		min_ptr->content = limit;
 }
