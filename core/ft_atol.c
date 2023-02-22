@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 14:56:07 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/17 10:55:28 by beroux           ###   ########.fr       */
+/*   Updated: 2023/02/20 17:54:30 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,11 @@ static int	mul_overflow(int64_t *dst, int64_t a, int64_t b)
 	return ((*dst) / a != b);
 }
 
-static int	ft_isdigit(char c)
-{
-	return (c >= '0' && c <= '9');
-}
-
 int64_t	ft_atol(const char *str)
 {
-	size_t			i;
+	size_t	i;
 	int64_t	res;
-	int				sign;
+	int		sign;
 
 	i = goto_nbr(str);
 	sign = 1;

@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stackput.c                                      :+:      :+:    :+:   */
+/*   check_nb.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 14:03:01 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/16 14:10:10 by beroux           ###   ########.fr       */
+/*   Created: 2023/02/19 02:28:19 by beroux            #+#    #+#             */
+/*   Updated: 2023/02/20 17:56:03 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "core/push_swap.h"
 
-void	ft_stackput(t_stack *stack)
+int	check_nb(char *number)
 {
-	if (!stack)
-		return ;
-	printf("%lu\n", stack->content);
-	if (stack->next)
-		ft_stackput(stack->next);
+	size_t	i;
+
+	i = 0;
+	while (number[i] && number[i] == ' ')
+		i++;
+	if (!number[i])
+		return (0);
+	i += (number[i] == '+' || number[i] == '-');
+	if (!number[i])
+		return (0);
+	while (number[i] && number[i] >= '0' && number[i] <= '9')
+		i++;
+	return (!number[i]);
 }

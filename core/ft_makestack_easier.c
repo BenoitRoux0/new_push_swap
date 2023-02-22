@@ -6,29 +6,18 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:33:57 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/17 18:09:38 by beroux           ###   ########.fr       */
+/*   Updated: 2023/02/20 17:54:49 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "core/push_swap.h"
 
 static int64_t	ft_stack_min(t_stack *stack);
-static void		ft_stack_set_minl(t_stack *stack, int64_t limit);
 static void		ft_stack_positive(t_stack *stack);
 
 void	ft_makestack_easier(t_stack *stack)
 {
-	int64_t	i;
-	int64_t	size;
-
 	ft_stack_positive(stack);
-	i = 0;
-	size = (int64_t) ft_stacksize(stack);
-	while (i < size)
-	{
-		ft_stack_set_minl(stack, i);
-		i++;
-	}
 }
 
 static void	ft_stack_positive(t_stack *stack)
@@ -58,24 +47,4 @@ static int64_t	ft_stack_min(t_stack *stack)
 		stack = stack->next;
 	}
 	return (min);
-}
-
-static void	ft_stack_set_minl(t_stack *stack, int64_t limit)
-{
-	t_stack	*min_ptr;
-	int64_t	min;
-
-	min = INT64_MAX;
-	min_ptr = NULL;
-	while (stack)
-	{
-		if (stack->content < min && min >= limit)
-		{
-			min = stack->content;
-			min_ptr = stack;
-		}
-		stack = stack->next;
-	}
-	if (min_ptr)
-		min_ptr->content = limit;
 }

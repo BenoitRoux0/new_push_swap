@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 18:52:26 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/16 13:35:12 by beroux           ###   ########.fr       */
+/*   Updated: 2023/02/20 15:13:55 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	ft_stackswap(t_stack **stack, char name)
 	*stack = (*stack)->next;
 	tmp->next = (*stack)->next;
 	(*stack)->next = tmp;
+	if (!name)
+		return ;
 	write(1, "s", 1);
 	write(1, &name, 1);
 	write(1, "\n", 1);

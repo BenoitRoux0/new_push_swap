@@ -20,6 +20,8 @@ void	ft_stackpushto(t_stack **src, t_stack **dst, char name)
 		return ;
 	to_push = ft_stackpop(src);
 	ft_stackpush(dst, to_push);
+	if (!name)
+		return ;
 	write(1, "p", 1);
 	write(1, &name, 1);
 	write(1, "\n", 1);

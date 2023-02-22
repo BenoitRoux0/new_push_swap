@@ -18,6 +18,8 @@ void	ft_stackrotate(t_stack **stack, char name)
 
 	tmp = ft_stackpop(stack);
 	ft_stackaddunder(stack, tmp);
+	if (!name)
+		return ;
 	write(1, "r", 1);
 	write(1, &name, 1);
 	write(1, "\n", 1);

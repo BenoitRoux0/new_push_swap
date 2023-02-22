@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 23:36:03 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/15 23:39:37 by beroux           ###   ########.fr       */
+/*   Updated: 2023/02/19 14:43:58 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@ void	ft_stackaddunder(t_stack **stack, t_stack *to_add)
 {
 	t_stack	*tmp;
 
+	if (!stack)
+		return ;
+	if (!(*stack))
+	{
+		*stack = to_add;
+		return ;
+	}
 	tmp = *stack;
 	while (tmp->next)
 		tmp = tmp->next;

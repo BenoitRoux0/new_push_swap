@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 18:11:18 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/16 14:13:06 by beroux           ###   ########.fr       */
+/*   Updated: 2023/02/20 17:53:59 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 # include <stdlib.h>
 # include <stdint.h>
-# include <stdio.h>
 # include <limits.h>
 # include <unistd.h>
+# include "libft/libft.h"
 
 typedef struct s_stack
 {
-	int64_t 		content;
+	int64_t			content;
 	struct s_stack	*next;
 }	t_stack;
 
@@ -39,13 +39,12 @@ void			ft_stackrotate(t_stack **stack, char name);
 void			ft_stackrev_rotate(t_stack **stack, char name);
 void			ft_stackswap(t_stack **stack, char name);
 size_t			ft_stacksize(t_stack *stack);
-int 			ft_stackis_sorted(t_stack *stack);
+int				ft_stackis_sorted(t_stack *stack);
 
 //utils
 int64_t			ft_atol(const char *str);
-char			**ft_split(const char *s, char c);
-char			*ft_strchr(const char *s, int c);
 void			ft_makestack_easier(t_stack *stack);
+int				check_nb(char *number);
 
 //push swap
 t_stack			*parse(int len, char **numbers);
@@ -53,5 +52,7 @@ void			sort(t_stack **stack);
 
 //sort
 void			radix(t_stack **stack_a, t_stack **stack_b);
+void			sort_5_elems(t_stack **stack, t_stack **stack_b);
+void			sort_3_elems(t_stack **stack);
 
 #endif
