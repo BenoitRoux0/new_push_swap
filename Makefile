@@ -12,7 +12,7 @@
 
 NAME =		push_swap
 
-CFLAGS =	-Wall -Werror -Wextra -g #-fsanitize=address
+CFLAGS =	-Wall -Werror -Wextra -g -fsanitize=address
 
 SRCS =		core/push_swap.c				\
 			core/sort.c						\
@@ -63,4 +63,4 @@ re:			fclean
 libft/libft.a:
 			make -C libft
 
-.PHONY:		all clean fclean libft
+.PHONY:		all clean fclean libft re

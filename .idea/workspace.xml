@@ -21,41 +21,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="353f24e7-3a56-4cc4-a402-ce265562d1a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/sorts/sort_5_elems.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/check_nb.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ft_atol.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ft_makestack_easier.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/parsing.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/push_swap.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/sort.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/sorts/radix.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/sorts/sort_3_elems.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/sorts/sort_5_elems.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_clearstack.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_stack_cont.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_stackis_sorted.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_stacknew.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_stackpop.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_stackpopunder.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_stackpush.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_stackpushto.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_stackpushunder.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_stackrev_rotate.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_stackrotate.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_stacksize.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/stack/ft_stackswap.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/push_swap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Push_Swap-Tester" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker_linux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/complexity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/ft_atol.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/ft_atol.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/ft_makestack_easier.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/ft_makestack_easier.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/ft_split.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/ft_strchr.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/parsing.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/parsing.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/push_swap.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/push_swap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/push_swap.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/push_swap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/sort.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/sort.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/sorts/radix.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/sorts/radix.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/sorts/radix_3.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/stack/ft_stackis_sorted.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/stack/ft_stackis_sorted.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/stack/ft_stacknew.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/stack/ft_stacknew.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/stack/ft_stackpopunder.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/stack/ft_stackpopunder.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/stack/ft_stackpushto.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/stack/ft_stackpushto.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/stack/ft_stackpushunder.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/stack/ft_stackpushunder.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/stack/ft_stackput.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/stack/ft_stackrev_rotate.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/stack/ft_stackrev_rotate.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/stack/ft_stackrotate.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/stack/ft_stackrotate.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/stack/ft_stacksize.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/stack/ft_stacksize.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/stack/ft_stackswap.c" beforeDir="false" afterPath="$PROJECT_DIR$/core/stack/ft_stackswap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgui.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/gnl/get_next_line.h" beforeDir="false" afterPath="$PROJECT_DIR$/libft/gnl/get_next_line.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/push_swap_visualizer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/push_swap_viz_kivy" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +136,11 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Makefile Application.all" />
       <item itemvalue="Makefile Application.fclean" />
@@ -175,7 +169,7 @@
       <workItem from="1676900783486" duration="1324000" />
       <workItem from="1676902147084" duration="6210000" />
       <workItem from="1676963054446" duration="211000" />
-      <workItem from="1677056524065" duration="2000" />
+      <workItem from="1677056524065" duration="939000" />
     </task>
     <servers />
   </component>
