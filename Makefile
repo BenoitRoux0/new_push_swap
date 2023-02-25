@@ -12,7 +12,7 @@
 
 NAME =		push_swap
 
-CFLAGS =	-Wall -Werror -Wextra -g -fsanitize=address
+CFLAGS =	-Wall -Werror -Wextra
 
 SRCS =		core/push_swap.c				\
 			core/sort.c						\
