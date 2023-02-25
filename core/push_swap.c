@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 14:54:45 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/20 17:55:14 by beroux           ###   ########.fr       */
+/*   Updated: 2023/02/22 12:43:40 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	main(int ac, char **av)
 	if (!stack)
 		return (write(2, "Error\n", 6), 0);
 	sort(&stack);
+	ft_clearstack(stack);
 	return (0);
 }
 
