@@ -6,13 +6,13 @@
 #    By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 18:56:01 by beroux            #+#    #+#              #
-#    Updated: 2023/02/15 15:00:14 by beroux           ###   ########lyon.fr    #
+#    Updated: 2023/02/27 08:51:21 by beroux           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =		push_swap
 
-CFLAGS =	-Wall -Werror -Wextra
+CFLAGS =	-Wall -Wextra -Werror
 
 SRCS =		core/push_swap.c				\
 			core/sort.c						\
@@ -35,7 +35,7 @@ SRCS =		core/push_swap.c				\
 			core/stack/ft_stackis_sorted.c	\
 			core/sorts/radix.c				\
 			core/sorts/sort_3_elems.c		\
-			core/sorts/sort_5_elems.c		\
+			core/sorts/sort_little_stack.c	\
 
 OBJS =		$(SRCS:%.c=%.o)
 
@@ -46,7 +46,7 @@ INC =		core/push_swap.h
 
 all:		$(NAME)
 
-$(NAME):	libft/libft.a $(OBJS)
+$(NAME):	libft $(OBJS)
 			$(CC) $(CFLAGS) -o $(NAME) $(OBJS) libft/libft.a -I.
 
 clean:
@@ -60,7 +60,7 @@ fclean:		clean
 re:			fclean
 			$(MAKE) all
 
-libft/libft.a:
+libft:
 			make -C libft
 
 .PHONY:		all clean fclean libft re

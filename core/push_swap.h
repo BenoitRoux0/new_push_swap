@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 18:11:18 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/20 17:53:59 by beroux           ###   ########.fr       */
+/*   Updated: 2023/02/27 08:43:27 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void			sort(t_stack **stack);
 
 //sort
 void			radix(t_stack **stack_a, t_stack **stack_b);
-void			sort_5_elems(t_stack **stack, t_stack **stack_b);
+void			sort_little_stack(t_stack **stack, t_stack **stack_b);
 void			sort_3_elems(t_stack **stack);
 
 #endif

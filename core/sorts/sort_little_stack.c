@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_5_elems.c                                     :+:      :+:    :+:   */
+/*   sort_little_stack.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 15:06:48 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/20 17:51:22 by beroux           ###   ########.fr       */
+/*   Updated: 2023/02/27 09:08:40 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static size_t	ft_find_stackmin(t_stack *stack);
 static t_stack	*extract_min(t_stack **stack);
 
-void	sort_5_elems(t_stack **stack, t_stack **stack_b)
+void	sort_little_stack(t_stack **stack, t_stack **stack_b)
 {
 	t_stack	*tmp;
 
@@ -31,6 +31,21 @@ void	sort_5_elems(t_stack **stack, t_stack **stack_b)
 		write(1, "sb\n", 3);
 	while (ft_stacksize(*stack_b))
 		ft_stackpushto(stack_b, stack, 'a');
+}
+
+static t_stack	*extract_min(t_stack **stack)
+{
+	size_t	pos;
+
+	pos = ft_find_stackmin(*stack);
+	while (ft_find_stackmin(*stack))
+	{
+		if (pos >= ft_stacksize(*stack) / 2)
+			ft_stackrev_rotate(stack, 'a');
+		else
+			ft_stackrotate(stack, 'a');
+	}
+	return (ft_stackpop(stack));
 }
 
 static size_t	ft_find_stackmin(t_stack *stack)
@@ -54,19 +69,4 @@ static size_t	ft_find_stackmin(t_stack *stack)
 		tmp = tmp->next;
 	}
 	return (pos);
-}
-
-static t_stack	*extract_min(t_stack **stack)
-{
-	size_t	pos;
-
-	pos = ft_find_stackmin(*stack);
-	while (ft_find_stackmin(*stack))
-	{
-		if (pos >= ft_stacksize(*stack) / 2)
-			ft_stackrev_rotate(stack, 'a');
-		else
-			ft_stackrotate(stack, 'a');
-	}
-	return (ft_stackpop(stack));
 }

@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_makestack_easier.c                              :+:      :+:    :+:   */
+/*   ft_stack_positive.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:33:57 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/20 17:54:49 by beroux           ###   ########.fr       */
+/*   Updated: 2023/02/27 09:13:36 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "core/push_swap.h"
 
 static int64_t	ft_stack_min(t_stack *stack);
-static void		ft_stack_positive(t_stack *stack);
 
-void	ft_makestack_easier(t_stack *stack)
-{
-	ft_stack_positive(stack);
-}
-
-static void	ft_stack_positive(t_stack *stack)
+void	ft_stack_positive(t_stack *stack)
 {
 	int64_t	min;
 
