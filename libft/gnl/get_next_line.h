@@ -5,13 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/19 14:24:46 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/19 14:25:32 by beroux           ###   ########.fr       */
+/*   Created: 2022/11/21 13:24:27 by beroux            #+#    #+#             */
+/*   Updated: 2023/03/01 13:32:32 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+
+# ifndef LIBFT_H
+#  error Include libft to use get next line
+# endif
 
 # include <stdlib.h>
 

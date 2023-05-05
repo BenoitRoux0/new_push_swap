@@ -6,11 +6,11 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:24:37 by beroux            #+#    #+#             */
-/*   Updated: 2023/01/14 11:25:46 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/03/01 13:33:03 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 #include <stdlib.h>
 
 size_t	ft_strlen_g(const char *s)

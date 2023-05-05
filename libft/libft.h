@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:19:52 by beroux            #+#    #+#             */
-/*   Updated: 2023/01/14 11:26:56 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/03/01 13:44:27 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 # include "gnl/get_next_line.h"
 # include "ft_printf/core/ft_printf.h"
@@ -23,13 +24,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }				t_list;
-
-typedef struct s_binary_tree
-{
-	void					*content;
-	struct s_binary_tree	*left_child;
-	struct s_binary_tree	*right_child;
-}				t_binary_tree;
 
 //char functions
 int		ft_isalpha(int c);

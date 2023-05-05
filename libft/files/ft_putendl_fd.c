@@ -6,12 +6,11 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:27:45 by beroux            #+#    #+#             */
-/*   Updated: 2022/11/10 14:13:04 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/03/01 13:42:24 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {

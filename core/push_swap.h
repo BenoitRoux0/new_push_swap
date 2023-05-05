@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 18:11:18 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/27 08:43:27 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/02/27 09:37:18 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int				ft_stackis_sorted(t_stack *stack);
 
 //utils
 int64_t			ft_atol(const char *str);
-void			ft_makestack_easier(t_stack *stack);
+void			ft_stack_positive(t_stack *stack);
 int				check_nb(char *number);
 
 //push swap

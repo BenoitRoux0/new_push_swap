@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 06:25:41 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/22 12:45:41 by beroux           ###   ########.fr       */
+/*   Updated: 2023/02/27 09:37:18 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	sort_3_elems(t_stack **stack)
 		write(1, "sa\n", 3);
 		return ;
 	}
-	ft_makestack_easier(*stack);
+	ft_stack_positive(*stack);
 	if ((*stack)->content == 0)
 		write(1, "rra\nsa\n", 7);
 	else if ((*stack)->next->content == 0)

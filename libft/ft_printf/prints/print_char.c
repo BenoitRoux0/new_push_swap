@@ -6,14 +6,13 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 18:12:24 by beroux            #+#    #+#             */
-/*   Updated: 2022/11/20 18:12:35 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/03/01 13:42:43 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "prints.h"
-#include <unistd.h>
 
-int	print_char(char c)
+int	print_char(int fd, char c)
 {
-	return (write(1, &c, 1));
+	return (write(fd, &c, 1));
 }

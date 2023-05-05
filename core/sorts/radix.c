@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:10:49 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/20 17:51:49 by beroux           ###   ########.fr       */
+/*   Updated: 2023/02/27 09:37:18 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	radix(t_stack **stack_a, t_stack **stack_b)
 	size_t	i;
 
 	i = 0;
-	ft_makestack_easier(*stack_a);
+	ft_stack_positive(*stack_a);
 	while (i < sizeof(int) * 8 && !ft_stackis_sorted(*stack_a))
 	{
 		radix_loop(stack_a, stack_b, i);

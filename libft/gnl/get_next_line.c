@@ -6,11 +6,11 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:24:33 by beroux            #+#    #+#             */
-/*   Updated: 2023/01/14 11:24:20 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/03/01 13:32:50 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 #include <stdlib.h>
 #include <unistd.h>
 

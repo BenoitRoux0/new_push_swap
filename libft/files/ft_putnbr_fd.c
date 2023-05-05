@@ -6,12 +6,11 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:29:07 by beroux            #+#    #+#             */
-/*   Updated: 2022/11/09 10:00:13 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/03/01 13:42:27 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

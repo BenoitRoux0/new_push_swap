@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 18:13:11 by beroux            #+#    #+#             */
-/*   Updated: 2022/11/20 18:13:12 by beroux           ###   ########lyon.fr   */
+/*   Created: 2023/04/28 15:50:57 by beroux            #+#    #+#             */
+/*   Updated: 2023/05/03 10:00:12 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include "libft.h"
 
-int	ft_isalnum(char c);
+int	ft_strcmp(const char *s1, const  char *s2)
+{
+	size_t	i;
 
-#endif
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] && s2[i])
+		i++;
+	return (s1[i] - s2[i]);
+}

@@ -6,61 +6,75 @@
 #    By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 18:56:01 by beroux            #+#    #+#              #
-#    Updated: 2023/02/27 08:51:21 by beroux           ###   ########lyon.fr    #
+#    Updated: 2023/05/04 16:43:32 by beroux           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =		push_swap
+DIR_LIBFT =			libft
 
-CFLAGS =	-Wall -Wextra -Werror
+include				libft/Makefile
 
-SRCS =		core/push_swap.c				\
-			core/sort.c						\
-			core/parsing.c					\
-			core/ft_makestack_easier.c		\
-			core/ft_atol.c					\
-			core/check_nb.c					\
-			core/stack/ft_stacknew.c		\
-			core/stack/ft_stackpush.c		\
-			core/stack/ft_stackpushto.c		\
-			core/stack/ft_stackpushunder.c	\
-			core/stack/ft_stackpopunder.c	\
-			core/stack/ft_stack_cont.c		\
-			core/stack/ft_clearstack.c		\
-			core/stack/ft_stackpop.c		\
-			core/stack/ft_stacksize.c		\
-			core/stack/ft_stackswap.c		\
-			core/stack/ft_stackrotate.c		\
-			core/stack/ft_stackrev_rotate.c	\
-			core/stack/ft_stackis_sorted.c	\
-			core/sorts/radix.c				\
-			core/sorts/sort_3_elems.c		\
-			core/sorts/sort_little_stack.c	\
+NAME =				push_swap
 
-OBJS =		$(SRCS:%.c=%.o)
+CFLAGS =			-Wall -Wextra -Werror
 
-INC =		core/push_swap.h
+ifdef DEBUG
+	CFLAGS += -g3
+endif
 
-%.o:		%.c $(INC) Makefile
-			$(CC) $(CFLAGS) -o $@ -c $< -I.
+ifdef SANITIZE
+	CFLAGS += -fsanitize=address
+endif
 
-all:		$(NAME)
+DIR_OBJS =			.objs
 
-$(NAME):	libft $(OBJS)
-			$(CC) $(CFLAGS) -o $(NAME) $(OBJS) libft/libft.a -I.
+DIR_SRCS =			core
 
-clean:
-			$(RM) $(OBJS)
-			$(MAKE) -C libft clean
+SRCS =				$(DIR_SRCS)/push_swap.c					\
+					$(DIR_SRCS)/sort.c						\
+					$(DIR_SRCS)/parsing.c					\
+					$(DIR_SRCS)/ft_stack_positive.c			\
+					$(DIR_SRCS)/ft_atol.c					\
+					$(DIR_SRCS)/check_nb.c					\
+					$(DIR_SRCS)/stack/ft_stacknew.c			\
+					$(DIR_SRCS)/stack/ft_stackpush.c		\
+					$(DIR_SRCS)/stack/ft_stackpushto.c		\
+					$(DIR_SRCS)/stack/ft_stackpushunder.c	\
+					$(DIR_SRCS)/stack/ft_stackpopunder.c	\
+					$(DIR_SRCS)/stack/ft_stack_cont.c		\
+					$(DIR_SRCS)/stack/ft_clearstack.c		\
+					$(DIR_SRCS)/stack/ft_stackpop.c			\
+					$(DIR_SRCS)/stack/ft_stacksize.c		\
+					$(DIR_SRCS)/stack/ft_stackswap.c		\
+					$(DIR_SRCS)/stack/ft_stackrotate.c		\
+					$(DIR_SRCS)/stack/ft_stackrev_rotate.c	\
+					$(DIR_SRCS)/stack/ft_stackis_sorted.c	\
+					$(DIR_SRCS)/sorts/radix.c				\
+					$(DIR_SRCS)/sorts/sort_3_elems.c		\
+					$(DIR_SRCS)/sorts/sort_little_stack.c	\
 
-fclean:		clean
-			$(RM) $(NAME)
-			$(MAKE) -C libft fclean
+OBJS =				$(SRCS:$(DIR_SRCS)/%.c=$(DIR_OBJS)/%.o)
 
-re:			fclean
-			$(MAKE) all
+INC =				core/push_swap.h
 
-libft:
-			make -C libft
+$(DIR_OBJS)/%.o:	$(DIR_SRCS)/%.c $(INC) Makefile
+					@[ -d $(shell dirname $@) ] || \
+					 (mkdir -p $(shell dirname $@) && \
+					  echo "$(shell dirname $@) created")
+					$(CC) $(CFLAGS) -o $@ -c $< -I. -I$(DIR_LIBFT)
 
-.PHONY:		all clean fclean libft re
+all:				$(NAME)
+
+$(NAME):			$(OBJS) $(LIBFT)
+					$(CC) $(CFLAGS) -o $(NAME) $^ -I. -I$(DIR_LIBFT)
+
+clean::
+					$(RM) -r $(DIR_OBJS)
+
+fclean::			clean
+					$(RM) $(NAME)
+
+re::				fclean
+					$(MAKE) all
+
+.PHONY:				all clean fclean libft re
