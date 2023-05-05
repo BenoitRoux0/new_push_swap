@@ -6,13 +6,13 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 15:50:57 by beroux            #+#    #+#             */
-/*   Updated: 2023/05/03 10:00:12 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/05/05 13:42:33 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(const char *s1, const  char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	size_t	i;
 
