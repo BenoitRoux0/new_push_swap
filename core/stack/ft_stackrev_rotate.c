@@ -6,13 +6,13 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 18:53:03 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/20 17:17:42 by beroux           ###   ########.fr       */
+/*   Updated: 2023/05/05 13:51:40 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "core/push_swap.h"
 
-void	ft_stackrev_rotate(t_stack **stack, char name)
+int	ft_stackrev_rotate(t_stack **stack, char name)
 {
 	t_stack	*tmp;
 
@@ -20,8 +20,6 @@ void	ft_stackrev_rotate(t_stack **stack, char name)
 	tmp->next = *stack;
 	*stack = tmp;
 	if (!name)
-		return ;
-	write(1, "rr", 2);
-	write(1, &name, 1);
-	write(1, "\n", 1);
+		return (0);
+	return (ft_printf("rr%c\n", name) == 4);
 }

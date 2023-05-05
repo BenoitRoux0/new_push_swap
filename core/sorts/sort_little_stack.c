@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 15:06:48 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/27 09:08:40 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/05/05 14:08:39 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,26 @@
 static size_t	ft_find_stackmin(t_stack *stack);
 static t_stack	*extract_min(t_stack **stack);
 
-void	sort_little_stack(t_stack **stack, t_stack **stack_b)
+int	sort_little_stack(t_stack **stack, t_stack **stack_b)
 {
 	t_stack	*tmp;
 
 	if (!stack || !(*stack) || ft_stackis_sorted(*stack))
-		return ;
+		return (0);
 	while (ft_stacksize(*stack) > 3)
 	{
 		tmp = extract_min(stack);
-		ft_stackpushto(&tmp, stack_b, 'b');
+		if (!tmp)
+			return (0);
+		if (!ft_stackpushto(&tmp, stack_b, 'b'))
+			return (0);
 	}
 	sort_3_elems(stack);
 	if (ft_stackis_sorted(*stack_b))
 		write(1, "sb\n", 3);
 	while (ft_stacksize(*stack_b))
 		ft_stackpushto(stack_b, stack, 'a');
+	return (1);
 }
 
 static t_stack	*extract_min(t_stack **stack)
@@ -41,9 +45,13 @@ static t_stack	*extract_min(t_stack **stack)
 	while (ft_find_stackmin(*stack))
 	{
 		if (pos >= ft_stacksize(*stack) / 2)
-			ft_stackrev_rotate(stack, 'a');
+		{
+			if (!ft_stackrev_rotate(stack, 'a'))
+				return (NULL);
+		}
 		else
-			ft_stackrotate(stack, 'a');
+			if (!ft_stackrotate(stack, 'a'))
+				return (NULL);
 	}
 	return (ft_stackpop(stack));
 }
