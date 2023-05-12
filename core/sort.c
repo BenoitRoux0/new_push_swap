@@ -6,19 +6,24 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:22:59 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/27 08:44:24 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/05/05 15:14:28 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "core/push_swap.h"
 
-void	sort(t_stack **stack)
+int	sort(t_stack **stack)
 {
 	t_stack	*stack_b;
 
 	stack_b = NULL;
 	if (ft_stacksize(*stack) <= 35)
-		sort_little_stack(stack, &stack_b);
+	{
+		if (!sort_little_stack(stack, &stack_b))
+			return (0);
+	}
 	else
-		radix(stack, &stack_b);
+		if (!radix(stack, &stack_b))
+			return (0);
+	return (1);
 }

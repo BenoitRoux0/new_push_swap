@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:10:49 by beroux            #+#    #+#             */
-/*   Updated: 2023/05/05 14:16:44 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/05/05 15:02:35 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,10 @@ static int	radix_loop(t_stack **stack_a, t_stack **stack_b, size_t shift)
 			return (0);
 		i++;
 	}
-	size = ft_stacksize(*stack_b);
-	i = 0;
-	while (i < size)
+	while (ft_stacksize(*stack_b))
 	{
 		if (!ft_stackpushto(stack_b, stack_a, 'a'))
 			return (0);
-		i++;
 	}
 	return (1);
 }
