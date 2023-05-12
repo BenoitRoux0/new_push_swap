@@ -6,7 +6,7 @@
 /*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:56:39 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/19 17:37:56 by beroux           ###   ########.fr       */
+/*   Updated: 2023/05/12 14:13:57 by beroux           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 static char	*join_args(int len, char **args);
 static void	clear_args(char **args, t_stack *stack);
 static char	**init_args(int len, char **args);
+static int	check_number(char *number, t_stack *stack);
 
 t_stack	*parse(int len, char **numbers)
 {
 	t_stack	*stack;
 	t_stack	*to_push;
-	int64_t	nb;
 	size_t	i;
 
 	numbers = init_args(len, numbers);
@@ -32,10 +32,9 @@ t_stack	*parse(int len, char **numbers)
 	{
 		if (!check_nb(numbers[i]))
 			return (clear_args(numbers, stack), NULL);
-		nb = ft_atol(numbers[i]);
-		if (nb > INT_MAX || nb < INT_MIN || ft_stack_cont(stack, nb))
+		if (!check_number(numbers[i], stack))
 			return (clear_args(numbers, stack), NULL);
-		to_push = ft_stacknew(nb);
+		to_push = ft_stacknew(ft_atol(numbers[i]));
 		if (!to_push)
 			return (clear_args(numbers, stack), NULL);
 		ft_stackaddunder(&stack, to_push);
@@ -43,6 +42,28 @@ t_stack	*parse(int len, char **numbers)
 	}
 	clear_args(numbers, NULL);
 	return (stack);
+}
+
+static int	check_number(char *number, t_stack *stack)
+{
+	int64_t	nb;
+
+	while (ft_strchr("\t\n\r\v\f ", *number))
+		number++;
+	if (!(*number) || !ft_isdigit(*number))
+		return (0);
+	if (*number == '-' || *number == '+')
+		number++;
+	while (*number == '0')
+		number++;
+	if (!(*number) || !ft_isdigit(*number))
+		return (0);
+	if (ft_strlen(number) > 10)
+		return (0);
+	nb = ft_atol(number);
+	if (nb > INT_MAX || nb < INT_MIN || ft_stack_cont(stack, nb))
+		return (0);
+	return (1);
 }
 
 static void	clear_args(char **args, t_stack *stack)
