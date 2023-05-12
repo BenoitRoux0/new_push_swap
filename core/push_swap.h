@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: beroux <beroux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 18:11:18 by beroux            #+#    #+#             */
-/*   Updated: 2023/05/05 13:55:06 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/05/12 10:28:39 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdint.h>
 # include <limits.h>
 # include <unistd.h>
-# include "libft/libft.h"
+# include "libft.h"
 
 typedef struct s_stack
 {
@@ -47,7 +47,7 @@ int				check_nb(char *number);
 
 //push swap
 t_stack			*parse(int len, char **numbers);
-void			sort(t_stack **stack);
+int				sort(t_stack **stack);
 
 //sort
 int				radix(t_stack **stack_a, t_stack **stack_b);

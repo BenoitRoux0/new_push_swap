@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+         #
+#    By: beroux <beroux@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 18:56:01 by beroux            #+#    #+#              #
-#    Updated: 2023/05/04 16:43:32 by beroux           ###   ########lyon.fr    #
+#    Updated: 2023/05/12 10:31:44 by beroux           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,18 +55,18 @@ SRCS =				$(DIR_SRCS)/push_swap.c					\
 
 OBJS =				$(SRCS:$(DIR_SRCS)/%.c=$(DIR_OBJS)/%.o)
 
-INC =				core/push_swap.h
+INC =				core/push_swap.h libft/libft.h
 
 $(DIR_OBJS)/%.o:	$(DIR_SRCS)/%.c $(INC) Makefile
 					@[ -d $(shell dirname $@) ] || \
 					 (mkdir -p $(shell dirname $@) && \
 					  echo "$(shell dirname $@) created")
-					$(CC) $(CFLAGS) -o $@ -c $< -I. -I$(DIR_LIBFT)
+					$(CC) $(CFLAGS) -o $@ -c $< -I$(DIR_SRCS) -I$(DIR_LIBFT)
 
 all:				$(NAME)
 
 $(NAME):			$(OBJS) $(LIBFT)
-					$(CC) $(CFLAGS) -o $(NAME) $^ -I. -I$(DIR_LIBFT)
+					$(CC) $(CFLAGS) -o $(NAME) $^ -I$(DIR_SRCS) -I$(DIR_LIBFT)
 
 clean::
 					$(RM) -r $(DIR_OBJS)

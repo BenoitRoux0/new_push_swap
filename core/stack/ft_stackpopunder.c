@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stackpopunder.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: beroux <beroux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 23:40:30 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/20 17:49:32 by beroux           ###   ########.fr       */
+/*   Updated: 2023/05/12 10:29:05 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/push_swap.h"
+#include "push_swap.h"
 
 t_stack	*ft_stackpopunder(t_stack *stack)
 {

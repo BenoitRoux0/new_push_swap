@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   check_nb.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: beroux <beroux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 02:28:19 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/20 17:56:03 by beroux           ###   ########.fr       */
+/*   Updated: 2023/05/12 10:29:05 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/push_swap.h"
+#include "push_swap.h"
 
 int	check_nb(char *number)
 {
