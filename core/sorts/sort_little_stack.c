@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_little_stack.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: beroux <beroux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 15:06:48 by beroux            #+#    #+#             */
-/*   Updated: 2023/05/05 15:12:14 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/05/12 10:29:05 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/push_swap.h"
+#include "push_swap.h"
 
 static size_t	ft_find_stackmin(t_stack *stack);
 static t_stack	*extract_min(t_stack **stack);

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stacknew.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: beroux <beroux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 18:48:05 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/19 14:42:07 by beroux           ###   ########.fr       */
+/*   Updated: 2023/05/12 10:30:52 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/push_swap.h"
+#include "push_swap.h"
 
 t_stack	*ft_stacknew(long int value)
 {

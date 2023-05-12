@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: beroux <beroux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:22:59 by beroux            #+#    #+#             */
-/*   Updated: 2023/05/05 15:14:28 by beroux           ###   ########lyon.fr   */
+/*   Updated: 2023/05/12 10:29:05 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/push_swap.h"
+#include "push_swap.h"
 
 int	sort(t_stack **stack)
 {

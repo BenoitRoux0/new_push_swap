@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stackpushunder.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: beroux <beroux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 23:36:03 by beroux            #+#    #+#             */
-/*   Updated: 2023/02/19 14:43:58 by beroux           ###   ########.fr       */
+/*   Updated: 2023/05/12 10:29:05 by beroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/push_swap.h"
+#include "push_swap.h"
 
 void	ft_stackaddunder(t_stack **stack, t_stack *to_add)
 {

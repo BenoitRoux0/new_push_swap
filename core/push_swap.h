@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: beroux <beroux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 18:11:18 by beroux            #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/05/12 14:12:43 by beroux           ###   ########lyon.fr   */
+=======
+/*   Updated: 2023/05/12 10:28:39 by beroux           ###   ########.fr       */
+>>>>>>> 37c1fa6a39af80101cb63127778e2681fad105d2
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +21,7 @@
 # include <stdint.h>
 # include <limits.h>
 # include <unistd.h>
-# include "libft/libft.h"
+# include "libft.h"
 
 typedef struct s_stack
 {
@@ -46,8 +50,13 @@ void	ft_stack_positive(t_stack *stack);
 int		check_nb(char *number);
 
 //push swap
+<<<<<<< HEAD
 t_stack	*parse(int len, char **numbers);
 int		sort(t_stack **stack);
+=======
+t_stack			*parse(int len, char **numbers);
+int				sort(t_stack **stack);
+>>>>>>> 37c1fa6a39af80101cb63127778e2681fad105d2
 
 //sort
 int		radix(t_stack **stack_a, t_stack **stack_b);

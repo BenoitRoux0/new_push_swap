@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beroux <beroux@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: beroux <beroux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:56:39 by beroux            #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/05/12 14:13:57 by beroux           ###   ########lyon.fr   */
+=======
+/*   Updated: 2023/05/12 10:29:05 by beroux           ###   ########.fr       */
+>>>>>>> 37c1fa6a39af80101cb63127778e2681fad105d2
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/push_swap.h"
+#include "push_swap.h"
 
 static char	*join_args(int len, char **args);
 static void	clear_args(char **args, t_stack *stack);
